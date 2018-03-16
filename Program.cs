@@ -23,7 +23,7 @@ namespace TasoCalc
         private static double XPLeft;
         private static double MessagesLeft;
 
-        //The actual script goes here.
+        //The actual program is located here.
         public static void Main()
 
         {
@@ -45,14 +45,14 @@ namespace TasoCalc
             }
             else
             {
-                //Since the level is under 30, nothing needs to be done
+                //Since the level is under 30, nothing needs to be done.
             }
 
-            //Set your current XP count
+            //Set your current XP count.
             Console.Write("Please enter how much XP you have: ");
             CurrentXP = Convert.ToDouble(Console.ReadLine());
 
- 
+
             //Calculates the information needed.
             double MessagesNeed = Level * 8;
             double XPgain = 45 + (Level * 5);
@@ -63,20 +63,26 @@ namespace TasoCalc
             //Writes the results to the console.
             //Results are color coded.
             //Green- Levels and XP
-            //Red- Leveling up
+            //Red- Leveling up about XP
+            //Yellow- Leveling up about messages
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Your Taso level is " + Level);
             Console.WriteLine("You currently have " + CurrentXP + "XP");
             Console.WriteLine("You would get " + XPgain + "XP per message.");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("You would need a total of " + XPneeded + "XP to level up.");
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("You would need around " + MessagesNeed + " Messages to level up.");
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("You need " + XPLeft + "XP points to get to the next level.");
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("You need " + MessagesLeft + " more messages to level up.");
 
             //Halt execution for 5 seconds so the user has a chance to read the results.
             System.Threading.Thread.Sleep(
             (int)System.TimeSpan.FromSeconds(5).TotalMilliseconds);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            System.Environment.Exit(1);
 
         }
 
