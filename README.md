@@ -7,3 +7,4 @@ Set up is simple. Copy/paste the code or import the .cs file into your favorite 
 Made in .NET Framework
 
 **Note: TasoCalcC will not work if your Taso level has passed 30. This is because after level 30, the amount of XP per message is randomized.**
+(Gee, thanks Kelwing)
